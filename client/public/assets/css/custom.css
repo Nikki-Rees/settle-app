@@ -1,0 +1,13 @@
+.bg-primary {
+    background-color: #b6d3e2!important;
+}
+
+.hero-image {
+    background-image: url("../images/rsz_canvadoors.jpg"); 
+    background-color: #cccccc; 
+    height: 1200px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }
+
