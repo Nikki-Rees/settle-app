@@ -5,6 +5,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn, Checkboxes, CustomSelect, FileBrowser } from "../components/Form";
+import { AddressForm } from "../components/AddressForm";
 
 function Rooms() {
   // Setting our component's initial state
@@ -31,38 +32,10 @@ function Rooms() {
     <Container fluid>
       <Row>
         <Col size="md-8">
-          <h1>
-            <h1>Enter property details</h1>
-          </h1>
-          <form>
-            <Input
-              onChange={() => { }}
-              name="Property name"
-              placeholder="Property name (required)"
-            />
-            <Input
-              onChange={() => { }}
-              name="Address"
-              placeholder="Address (required)"
-            />
-            <Input
-              onChange={() => { }}
-              name="author"
-              placeholder="Author (required)"
-            />
-            <TextArea
-              onChange={() => { }}
-              name="synopsis"
-              placeholder="Synopsis (Optional)"
-            />
-
-            <FormBtn
-              disabled={!(formObject.author && formObject.title)}
-              onClick={() => { }}
-            >
-              Submit
-              </FormBtn>
-          </form>
+          <h2>
+            Property info
+          </h2>
+          <AddressForm />
         </Col>
       </Row>
       <Row>

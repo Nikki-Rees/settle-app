@@ -1,13 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;  
+}
+
 .bg-primary {
-    background-color: #b6d3e2!important;
+    background-color: #215376!important;
 }
 
 .hero-image {
-    background-image: url("../images/rsz_canvadoors.jpg"); 
+    background-image: url("../images/rsz_canvadoors5.jpg"); 
     background-color: #cccccc; 
-    height: 1200px;
+    height: 960px;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
   }
+
+.jumbotron {
+    text-align: center;
+    background: solid;
+    margin-top: 100px;
+    width:40%;
+    height: 200px;
+   font-family: 'Roboto', sans-serif;
+   color: #03345c;
+   padding-top: 40px; 
+}
+
+.logo {
+    height: 50px;
+}
 

@@ -12,20 +12,24 @@ function Home() {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
-              <h1>Landlord</h1>
-              <br />
-              <Button outline color="info">Sign-in</Button>{''}
-            </Jumbotron>
-
+            <div class="d-flex justify-content-start">
+              <Jumbotron>
+                <h1>Landlord</h1>
+                <p>Manage your property</p>
+                <Button outline color="info" onClick={() => { }}>Sign-up</Button>{''}
+                <Button outline color="info" onClick={() => { }}>Sign-in</Button>{''}
+              </Jumbotron>
+            </div>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Tenant</h1>
-              <br />
-              <Button outline color="info">Sign-in</Button>{''}
-            </Jumbotron>
-
+            <div class="d-flex justify-content-end">
+              <Jumbotron>
+                <h1>Tenant</h1>
+                <p>Maintain your home</p>
+                <Button outline color="info" onClick={() => { }} >Sign-up</Button>{''}
+                <Button outline color="info" onClick={() => { }}>Sign-in</Button>{''}
+              </Jumbotron>
+            </div>
           </Col>
         </Row>
 

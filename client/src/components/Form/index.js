@@ -33,7 +33,7 @@ export function Checkboxes(props) {
   return (
 
     <div>
-      <CustomInput {...props} type="checkbox" id="exampleCustomCheckbox" />
+      <CustomInput {...props} type="checkbox" id="CustomCheckbox" />
     </div>
 
   );
@@ -56,11 +56,8 @@ export function CustomSelect(props) {
 
     <CustomInput type="select" id="exampleCustomSelect" name="customSelect">
       <option value="">Select</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option></option>
+
     </CustomInput>
 
   );
