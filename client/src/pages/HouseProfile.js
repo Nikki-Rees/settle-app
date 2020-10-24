@@ -4,8 +4,9 @@ import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn, Checkboxes, CustomSelect, FileBrowser } from "../components/Form";
+import { Input, TextArea, FormBtn, Checkbox, CustomSelect, FileBrowser, Toolbar } from "../components/Form";
 import { AddressForm } from "../components/AddressForm";
+import { FormGroup } from "reactstrap";
 
 function Rooms() {
   // Setting our component's initial state
@@ -32,52 +33,47 @@ function Rooms() {
     <Container fluid>
       <Row>
         <Col size="md-8">
-          <h2>
+          <h1>
             Property info
-          </h2>
+          </h1>
           <AddressForm />
         </Col>
       </Row>
       <Row>
         <Col size="md-6">
-          <Jumbotron>
-            <h1>Select the rooms</h1>
-          </Jumbotron>
+
+          <h1>Select the rooms</h1>
+
           <form>
-
-            <Checkboxes
-              onChange={() => { }}
-              label="Bedroom"
-
-            />
+            <FormGroup>
+              <Toolbar />
+            </FormGroup>
 
             <Input
               onChange={() => { }}
-              name="title"
-              placeholder="Title (required)"
+              name="Other"
+              placeholder="Other (required)"
             />
-            <Input
-              onChange={() => { }}
-              name="author"
-              placeholder="Author (required)"
-            />
+
             <TextArea
               onChange={() => { }}
-              name="synopsis"
-              placeholder="Synopsis (Optional)"
+              name="Description"
+              placeholder="Description (Optional)"
             />
             <FormBtn
-              disabled={!(formObject.author && formObject.title)}
+              disabled={!(formObject.name && formObject.quantity)}
               onClick={() => { }}
             >
-              Submit Room
+              Submit Rooms
               </FormBtn>
+
           </form>
         </Col>
+
         <Col size="md-6 sm-12">
-          <Jumbotron>
-            <h1>Property name</h1>
-          </Jumbotron>
+
+          <h1>Property name</h1>
+
           {rooms.length ? (
             <List>
               {rooms.map(room => {
@@ -85,7 +81,7 @@ function Rooms() {
                   <ListItem key={room._id}>
                     <a href={"/rooms/" + room._id}>
                       <strong>
-                        {room.title} by {room.author}
+                        {room.name} and {room.number}
                       </strong>
                     </a>
                     <DeleteBtn onClick={() => { }} />
@@ -99,7 +95,7 @@ function Rooms() {
         </Col>
       </Row>
 
-    </Container>
+    </Container >
   );
 }
 

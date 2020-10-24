@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Jumbotron from "../components/Jumbotron";
 import DeleteBtn from "../components/DeleteBtn";
+import ImageCards from "../components/ImageCard";
 import API from "../utils/API";
+
+
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
@@ -31,11 +34,35 @@ function Rooms() {
   return (
     <Container maxWidth="sm">
       <Row>
-        <Col size="md-6">
-          <Jumbotron>
-            <h1>Select rooms</h1>
-          </Jumbotron>
+        <ImageCards />
+      </Row>
+      <Row>
 
+        <Col size="md-6 sm-12">
+
+          <h1>Room List</h1>
+
+          {rooms.length ? (
+            <List>
+              {rooms.map(room => {
+                return (
+                  <ListItem key={room._id}>
+                    <a href={"/rooms/" + room._id}>
+                      <strong>
+                        {room.name} by {room.number}
+                      </strong>
+                    </a>
+                    <DeleteBtn onClick={() => { }} />
+                  </ListItem>
+                );
+              })}
+            </List>
+          ) : (
+              <h3>No Results to Display</h3>
+            )}
+        </Col>
+        <Col size="md-6 sm-12">
+          <h1>Add details</h1>
           <form>
             <Input
               onChange={() => { }}
@@ -60,29 +87,7 @@ function Rooms() {
               </FormBtn>
           </form>
         </Col>
-        <Col size="md-6 sm-12">
-          <Jumbotron>
-            <h1>Room List</h1>
-          </Jumbotron>
-          {rooms.length ? (
-            <List>
-              {rooms.map(room => {
-                return (
-                  <ListItem key={room._id}>
-                    <a href={"/rooms/" + room._id}>
-                      <strong>
-                        {room.title} by {room.author}
-                      </strong>
-                    </a>
-                    <DeleteBtn onClick={() => { }} />
-                  </ListItem>
-                );
-              })}
-            </List>
-          ) : (
-              <h3>No Results to Display</h3>
-            )}
-        </Col>
+
       </Row>
     </Container>
   );

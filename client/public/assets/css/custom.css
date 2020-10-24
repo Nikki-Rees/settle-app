@@ -2,6 +2,17 @@ body {
     font-family: 'Roboto', sans-serif;  
 }
 
+.main {
+    padding: 100px;
+    margin: 20px; 
+}
+
+h1 {
+    padding:10px;
+    font-family: 'Roboto', sans-serif;
+    color: #03345c;
+}
+
 .bg-primary {
     background-color: #215376!important;
 }

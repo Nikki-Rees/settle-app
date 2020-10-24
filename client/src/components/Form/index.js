@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomInput, Form, FormGroup, Label } from 'reactstrap';
+import { CustomInput, Form, FormGroup, Label, Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
 
 // This file exports the Input, TextArea, and FormBtn components
 
@@ -29,7 +29,7 @@ export function FormBtn(props) {
 }
 
 
-export function Checkboxes(props) {
+export function Checkbox(props) {
   return (
 
     <div>
@@ -71,3 +71,22 @@ export function FileBrowser(props) {
   );
 }
 
+export function Toolbar(props) {
+
+  return (
+
+    <ButtonToolbar label="Bedrooms">
+      <h4>Bedrooms </h4>
+      <ButtonGroup>
+        <Button>1</Button>
+        <Button>2</Button>
+        <Button>3</Button>
+        <Button>4</Button>
+        <Button>5</Button>
+        <Button>6</Button>
+        <Button>7</Button>
+      </ButtonGroup>
+    </ButtonToolbar>
+  );
+
+}
