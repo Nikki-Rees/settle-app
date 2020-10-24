@@ -3,6 +3,7 @@ import {
     Card, Button, CardImg, CardTitle, CardText, CardDeck,
     CardSubtitle, CardBody
 } from 'reactstrap';
+import "./style.css"
 
 export default function ImageCards(props) {
     return (
@@ -11,10 +12,10 @@ export default function ImageCards(props) {
                 <Card>
                     <CardImg top width="100%" src="../assets/images/countersink.jpg" alt="Card image cap" />
                     <CardBody>
-                        <CardTitle>Card title</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
-                        <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                        <Button>Button</Button>
+                        <CardTitle>{props.feature_name} Feature name</CardTitle>
+                        <CardSubtitle>{props.feature_condition} Feature condition</CardSubtitle>
+                        <CardText>{props.feature_description} Feature description, this card has supporting text below as a natural lead-in to additional content.</CardText>
+                        <Button>Edit</Button>
                     </CardBody>
                 </Card>
                 <Card>

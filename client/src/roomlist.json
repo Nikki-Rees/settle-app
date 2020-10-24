@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Bedroom 1",
+        "type": "Bedrooms"
+    },
+    {
+        "id": 2,
+        "name": "Bedroom 2",
+        "type": "Bedrooms"
+    },
+    {
+        "id": 3,
+        "name": "Bedroom 3",
+        "type": "Bedrooms"
+    },
+    {
+        "id": 4,
+        "name": "Bedroom 4",
+        "type": "Bedrooms"
+    },
+]

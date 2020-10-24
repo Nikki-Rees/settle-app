@@ -2,16 +2,15 @@ body {
     font-family: 'Roboto', sans-serif;  
 }
 
-.main {
-    padding: 100px;
-    margin: 20px; 
-}
 
 h1 {
-    padding:10px;
+    padding-top:40px;
+    padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     color: #03345c;
 }
+
+
 
 .bg-primary {
     background-color: #215376!important;
@@ -40,4 +39,6 @@ h1 {
 .logo {
     height: 50px;
 }
+
+
 

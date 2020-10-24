@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import Jumbotron from "../components/Jumbotron";
 import DeleteBtn from "../components/DeleteBtn";
 import ImageCards from "../components/ImageCard";
+import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
+
 import API from "../utils/API";
 
 
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, TextArea, FormBtn, FileBrowser } from "../components/Form";
+import ConditionDropdown from "../components/ConditionDropdown";
 
 
 
@@ -34,6 +37,7 @@ function Rooms() {
   return (
     <Container maxWidth="sm">
       <Row>
+        <h1>PropertyName : RoomName</h1>
         <ImageCards />
       </Row>
       <Row>
@@ -49,7 +53,7 @@ function Rooms() {
                   <ListItem key={room._id}>
                     <a href={"/rooms/" + room._id}>
                       <strong>
-                        {room.name} by {room.number}
+                        {room.name}
                       </strong>
                     </a>
                     <DeleteBtn onClick={() => { }} />
@@ -62,25 +66,26 @@ function Rooms() {
             )}
         </Col>
         <Col size="md-6 sm-12">
-          <h1>Add details</h1>
+          <h1>Add features</h1>
           <form>
             <Input
               onChange={() => { }}
-              name="title"
-              placeholder="Title (required)"
+              name="feature_name"
+              placeholder="Feature name (required) e.g. Kitchen sink"
             />
-            <Input
+            <ConditionDropdown
               onChange={() => { }}
-              name="author"
-              placeholder="Author (required)"
+              name="feature_condition"
+              placeholder="Condition (required)"
             />
+            <FileBrowser />
             <TextArea
               onChange={() => { }}
-              name="synopsis"
-              placeholder="Synopsis (Optional)"
+              name="feature_description"
+              placeholder="Description (Optional)"
             />
             <FormBtn
-              disabled={!(formObject.author && formObject.title)}
+              disabled={!(formObject.condition && formObject.feature_name)}
               onClick={() => { }}
             >
               Submit

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from 'reactstrap';
+import { Col, Row, Form, FormGroup, Label, Input, CustomInput, Button } from 'reactstrap';
+
+import "./style.css"
 
 export function AddressForm(props) {
     return (
@@ -54,8 +56,8 @@ export function AddressForm(props) {
                     </FormGroup>
                 </Col>
             </Row>
-
             <Button>Save details</Button>
+
         </Form >
     );
 }

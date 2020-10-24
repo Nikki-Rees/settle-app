@@ -2,9 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const roomSchema = new Schema({
-  name: { type: String, required: true },
-  author: { type: String, required: true },
-  synopsis: String,
+  property_name: { type: String, required: true },
+  room_name: { type: String, required: true },
+  feature_name: String,
+  feature_img: String,
+  feature_condition: String,
+  feature_description: String,
   date: { type: Date, default: Date.now }
 });
 

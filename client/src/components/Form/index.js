@@ -1,5 +1,6 @@
 import React from "react";
 import { CustomInput, Form, FormGroup, Label, Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
+import "./style.css"
 
 // This file exports the Input, TextArea, and FormBtn components
 
@@ -22,7 +23,7 @@ export function TextArea(props) {
 
 export function FormBtn(props) {
   return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+    <button {...props} >
       {props.children}
     </button>
   );
@@ -32,9 +33,7 @@ export function FormBtn(props) {
 export function Checkbox(props) {
   return (
 
-    <div>
-      <CustomInput {...props} type="checkbox" id="CustomCheckbox" />
-    </div>
+    <Input type="checkbox" />
 
   );
 }
@@ -66,17 +65,17 @@ export function CustomSelect(props) {
 export function FileBrowser(props) {
   return (
 
-    <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" label="Yo, pick a file!" />
+    <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" label="Upload an image" />
 
   );
 }
 
-export function Toolbar(props) {
+export function RoomToolbar(props) {
 
   return (
 
     <ButtonToolbar label="Bedrooms">
-      <h4>Bedrooms </h4>
+      <h4> Bedrooms  </h4>
       <ButtonGroup>
         <Button>1</Button>
         <Button>2</Button>
@@ -87,6 +86,7 @@ export function Toolbar(props) {
         <Button>7</Button>
       </ButtonGroup>
     </ButtonToolbar>
+
   );
 
 }
