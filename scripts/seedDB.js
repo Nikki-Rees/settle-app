@@ -8,6 +8,7 @@ mongoose.connect(
   "mongodb://localhost/rooms"
 );
 
+
 const roomSeed = [
   {
     property_name: "Freshwater",

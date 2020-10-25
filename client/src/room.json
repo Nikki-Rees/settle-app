@@ -1,0 +1,11 @@
+[
+    {
+        "property_name": "Freshwater",
+        "room_name": "Kitchen",
+        "feature_name": "Kitchen sink",
+        "feature_img": "../assets/images/countersink.jpg",
+        "feature_condition": "Good",
+        "feature_description": "Clean with some little scratches within the tub, taps recently replaced.  Draining freely",
+        "date": "new Date(Date.now())"
+    }
+]

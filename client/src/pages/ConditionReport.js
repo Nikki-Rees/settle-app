@@ -6,12 +6,11 @@ import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-reac
 
 import API from "../utils/API";
 
-
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn, FileBrowser } from "../components/Form";
 import ConditionDropdown from "../components/ConditionDropdown";
-
+// import ImageWidget from "../components/ImageWidget"
 
 
 function Rooms() {
@@ -65,6 +64,8 @@ function Rooms() {
               <h3>No Results to Display</h3>
             )}
         </Col>
+
+
         <Col size="md-6 sm-12">
           <h1>Add features</h1>
           <form>
@@ -78,6 +79,7 @@ function Rooms() {
               name="feature_condition"
               placeholder="Condition (required)"
             />
+            {/* <ImageWidget /> */}
             <FileBrowser />
             <TextArea
               onChange={() => { }}
